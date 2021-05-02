@@ -26,10 +26,8 @@ buttonDestroy.addEventListener('click', destroyBoxes);
 function createBoxes(amount) {
     amount = input.value;
     const newPlace = [];
-    for (let i = 1; i <= amount; i += 1) {
-        const newDiv = document.innerHTML = `<div></div>`;
-    
-    newPlace.push(newDiv);
+    for (let i = 1; i <= amount; i += 1) {    
+    newPlace.push(document.innerHTML = `<div></div>`);
     }
     boxes.insertAdjacentHTML('afterbegin', newPlace.join(''));
 };
