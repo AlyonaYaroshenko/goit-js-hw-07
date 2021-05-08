@@ -23,30 +23,31 @@ const ingredients = [
   'Зелень',
   'Приправы',
 ];
-// const list = document.querySelector('ul');
+const list = document.querySelector('ul');
 
-// const newList = options => {
-//   return options.map(option => {
-//     const newLi = document.createElement('li');
-//     list.appendChild(newLi);
-//     return newLi;
-//   });
-// };
-// const elements = newList(ingredients);
-// list.appendChild(...elements);
-// console.log(list);
+const newList = options => {
+  return options.map(option => {
+    const newLi = document.createElement('li');
+    newLi.textContent = option;
+    list.appendChild(newLi);
+    return newLi;
+  });
+};
+const elements = newList(ingredients);
+list.appendChild(...elements);
+console.log(list);
 
-const list = document.querySelector('#ingredients')
-const newList = [];
+// const list = document.querySelector('#ingredients')
+// const newList = [];
 
-ingredients.forEach(ingredient => {
-    const listEl = document.createElement('li');
-  listEl.textContent = ingredient;
-  newList.push(listEl);
-})
+// ingredients.forEach(ingredient => {
+//     const listEl = document.createElement('li');
+//   listEl.textContent = ingredient;
+//   newList.push(listEl);
+// })
 
-list.append(...newList);
-console.log(document);
+// list.append(...newList);
+// console.log(document);
 
 
 
