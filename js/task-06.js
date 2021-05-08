@@ -13,17 +13,22 @@
 const input = document.querySelector('#validation-input');
 input.addEventListener('blur', onInputBlur);
 input.classList.add("js-valid", "js-invalid");
-const style = document.querySelector('.js-valid')
+const styleValid = document.querySelector('.js-valid');
+const styleInvalid = document.querySelector('.js-invalid')
+
 const validLength = input.dataset.length;
 
 
 function onInputBlur() {
     console.log('there is no focus');
     if (input.value.length === Number(validLength)) {
-document.querySelector('.js-valid').style.borderColor = 'green';
+// document.querySelector('.js-valid').style.borderColor = 'green';
+    styleValid.style.borderColor = 'green';
+
     }
     else {
-document.querySelector('.js-invalid').style.borderColor = 'red';
+// document.querySelector('.js-invalid').style.borderColor = 'red';
+    styleInvalid.style.borderColor = 'red';
         };
     
 }
